@@ -9,18 +9,12 @@ $(document).ready(function () {
 })
 
 function success(characters) {
-
-  //console.log("Type : "+typeof(characters));
   characters = JSON.parse(characters);
   console.log('success:', characters);
   for (var i = 0; i < characters.characters.length; i++) {
-    $('div').append('<p>'+characters.characters[i].name+'</p><p><img src='+characters.characters[i].img+'></p>');
-    console.log(characters.characters[i].name);
+    $('#contenedor').append('<p>'+characters.characters[i].name+'</p><p><img src='+characters.characters[i].img+'></p>');
   }
-  console.log(characters.characters.length);
-  /*$.each( function (i, characters) {
-    console.log(characters.characters[i].name);
-  })*/
+
   
 }
 
