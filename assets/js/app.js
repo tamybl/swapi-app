@@ -1,10 +1,18 @@
 $(document).ready(function () {
-
-  $("button").click(function(){
-    $.getJSON("assets/js/characters.js", function(result){
-        $.each(result, function(i, field){
-            $("div").append(field + " ");
-        });
+    var url = 'https://raw.githubusercontent.com/tamybl/swapi-app/master/assets/js/characters.js';
+    $.ajax ({
+      type: 'GET',
+      url: url,
+      success: success,
+      error: error
     });
-});
 })
+
+function success(characters) {
+  console.log('success:', characters);
+}
+
+
+function error() {
+  console.log('Ha ocurrido un error');
+}
