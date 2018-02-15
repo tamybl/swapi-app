@@ -10,6 +10,7 @@ $(document).ready(function () {
 
 function success(characters) {
   console.log('success:', characters);
+  console.log(characters[0]);
 }
 
 
