@@ -12,7 +12,7 @@ function success(characters) {
   characters = JSON.parse(characters);
   console.log('success:', characters);
   for (var i = 0; i < characters.characters.length; i++) {
-    $('#contenedor').append('<p>'+characters.characters[i].name+'</p><p><img src='+characters.characters[i].img+'></p>');
+    $('#contenedor').append('<div class="col-xs-4 character"><div class="photo"><img src='+characters.characters[i].img+' alt=""></div><div class="name">Luke Skywalker</div><div class="view"><button class="btn text-uppercase">Info</button></div></div>');
   }
 
   
