@@ -8,29 +8,22 @@ $(document).ready(function () {
     });
 })
 
-function getCharacters(characters) {
-  characters = JSON.parse(characters);
-  //console.log('success:', characters);
-  for (var i = 0; i < characters.characters.length; i++) {
-    $('#contenedor').append('<div class="col-xs-4 character"><div class="photo"><img src='+characters.characters[i].img+' alt=""></div><div class="name">'+characters.characters[i].name+'</div><div class="view"><a href="'+characters.characters[i].id+'" class="btn text-uppercase myModal" data-toggle="modal" data-target="#myModal">Info</a></div></div>');
+function getCharacters(data) {
+  data = JSON.parse(data);
+  for (var i = 0; i < data.characters.length; i++) {
+    $('#results').append('<div class="col-xs-4 character"><div class="photo"><img src='+data.characters[i].img+' alt=""></div><div class="name">'+data.characters[i].name+'</div><div class="view"><a href="'+data.characters[i].id+'" class="btn btn-default text-uppercase myModal" data-toggle="modal" data-target="#myModal">Info</a></div></div>');
   }
 
   $('.myModal').click(function () {
     var id = $(this).attr('href');
     let url = 'https://swapi.co/api/people/'+id;
-    console.log(url);
-    $.ajax({
-      url: url,
-      success: getDetails,
-      error: error
+    $.get(url, function (data, status) {
+      console.log(data);
+      $(".modal-content").html('<div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button><h4 class="modal-title">'+data.name+'</h4></div><div class="modal-body"><p>'+data.height+'</p><p>'+data.mass+'</p><p>'+data.hair_color+'</p></div>');
     });
   })
 }
 
-function getDetails(details) {
-  console.log(details)
-
-}
 
 function error() {
   console.log('Ha ocurrido un error');

@@ -4,17 +4,59 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <title>Swapi App</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-  <nav> </nav>
-  <main class="container-fluid">
-    <div class="row text-center" id="contenedor">
+  <div class="app">
+    <nav class="navbar navbar-inverse navbar-fixed-top navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+          </button>
+        <a class="navbar-brand logo" href="#"><img src="assets/img/Star-Wars-Logo_Silver.png" alt="" class="img-responsive"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Users</a></li>
+            <li><a href="#">Panel</a></li>
+            <li><a href="#">Close Session</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main class="container-fluid content">
+      <div class="row text-center" id="results">
       <!--<div class="col-xs-4 character"><div class="photo"><img src="assets/img/personajes/luke-skywalker.png" alt=""></div><div class="name">Luke Skywalker</div><div class="view"><button class="btn text-uppercase">Info</button></div></div>-->
+      </div>
+    </main>
+  </div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content modal-result">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p><img src="assets/img/falcon-reload.gif" alt=""></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
     </div>
-  </main>
-
+  </div>
   <script src="assets/js/jquery-3.3.1.min.js"></script>
   <script src="assets/js/bootstrap.min.js">  </script>
   <script src="assets/js/app.js"></script>
