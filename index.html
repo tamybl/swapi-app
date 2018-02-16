@@ -6,11 +6,13 @@
   <title>Swapi App</title>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 <link rel="icon" href="favicon.ico" type="image/x-icon">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
   <div class="app">
+    <!-- MENU PRINCIPAL -->
     <nav class="navbar navbar-inverse navbar-fixed-top navigation">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -23,26 +25,25 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Users</a></li>
-            <li><a href="#">Panel</a></li>
-            <li><a href="#">Close Session</a></li>
+            <li class="active"><a href="#">Usuarios</a></li>
+            <li><a href="#">Configuración</a></li>
+            <li><a href="#">Cerrar Sesión</a></li>
           </ul>
         </div>
       </div>
     </nav>
     <main class="container-fluid content">
-      <div class="submenu text-uppercase"><ul>
+      <!-- MENU SECUNDARIO -->
+      <div class="submenu text-uppercase text-center"><ul>
         <li><a href="#">Personajes</a></li>
         <li><a href="#">Planetas</a></li>
         <li><a href="">Naves</a></li>
       </ul></div>
-      <div class="row row-table text-center" id="results">
-      <!--<div class="col-xs-4 character"><div class="photo"><img src="assets/img/personajes/luke-skywalker.png" alt=""></div><div class="name">Luke Skywalker</div><div class="view"><button class="btn text-uppercase">Info</button></div></div>-->
-      </div>
+      <div class="row row-table text-center" id="results"></div>
     </main>
   </div>
   
-  <!-- Modal -->
+  <!-- Modal Personaje -->
   <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
     

@@ -1,10 +1,13 @@
 body {
   background-color: #333;
   color: #fff;
+  font-family: 'Roboto', sans-serif;
 }
 
 .character {
-  display: table-cell;
+  width: 32%;
+  margin: 0.65%;
+  padding: 0.3em 0.2em 0.5em 0.2em;
   border: 1px solid #3B3B3B;
   background-color: rgba(29, 23, 33, 0.7);
   border-radius: 6px;
@@ -38,10 +41,29 @@ body {
   background-size: cover;
 }
 
-.row-table {
-  display: table;
+.loading {
+  width: 50%;
+  margin: auto;
 }
 
-.col-cell {
-  display: table-cell;
+
+.submenu ul {
+  padding: 0;
+}
+
+.submenu ul li {
+  font-size: 1.2em;
+  padding: .2em .8em;
+  list-style-type: none;
+  display: inline-block;
+}
+
+.submenu a {
+  color: #e1e1e1;
+    text-decoration: none;
+    text-shadow: 1px 1px #1d1722;
+}
+
+.row-table {
+  padding: 0.5em;
 }
