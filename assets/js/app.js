@@ -15,11 +15,12 @@ function getCharacters(data) {
   }
 
   $('.myModal').click(function () {
+    $(".modal-content").html('<div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button><h4 class="modal-title text-center">Loading...</h4></div><div class="modal-body"><p><img src="assets/img/loading.gif" alt="" class="img-responsive"></p></div>');
     var id = $(this).attr('href');
     let url = 'https://swapi.co/api/people/'+id;
     $.get(url, function (data, status) {
       console.log(data);
-      $(".modal-content").html('<div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button><h4 class="modal-title">'+data.name+'</h4></div><div class="modal-body"><p>'+data.height+'</p><p>'+data.mass+'</p><p>'+data.hair_color+'</p></div>');
+      $(".modal-content").html('<div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button><h4 class="modal-title text-center">'+data.name+'</h4></div><div class="modal-body"><p>Height: '+data.height+'</p><p>Mass :'+data.mass+'</p><p>'+data.hair_color+'</p></div>');
     });
   })
 }

@@ -4,6 +4,7 @@ body {
 }
 
 .character {
+  display: table-cell;
   border: 1px solid #3B3B3B;
   background-color: rgba(29, 23, 33, 0.7);
   border-radius: 6px;
@@ -33,5 +34,14 @@ body {
 }
 
 .modal-result {
-  background-color: #000;
+  background-image: url(../img/modal-bg.jpg);
+  background-size: cover;
+}
+
+.row-table {
+  display: table;
+}
+
+.col-cell {
+  display: table-cell;
 }
